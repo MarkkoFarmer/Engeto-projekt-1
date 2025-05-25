@@ -44,7 +44,7 @@ USERS = {
 username = input("username:")
 password = input("password:")
 
-if USERS.get(username) != password:
+if USERS.get(username, None) != password:
     print("unregistered user, terminating the program..")
     exit()
 
@@ -64,7 +64,11 @@ print("-" * 40)
 
 # Vybraný text
 text = TEXTS[int(selection) - 1]
-words = [word.strip(".,\n") for word in text.split()]
+
+# Odstranění interpunkce
+import string
+translator = str.maketrans('', '', string.punctuation)
+words = [word.translate(translator) for word in text.split()]
 
 # Statistika
 word_count = len(words)
