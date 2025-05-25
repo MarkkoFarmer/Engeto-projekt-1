@@ -1,5 +1,5 @@
 """
-projekt_1.py: první projekt do Engeto Online Python Akademie
+main.py: první projekt do Engeto Online Python Akademie
 
 author: Marek Sedlák
 email: sedlak.marek14@icloud.com
